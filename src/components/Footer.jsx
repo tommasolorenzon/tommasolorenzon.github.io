@@ -31,13 +31,6 @@ export default function Footer() {
           >
             GitHub
           </a>
-          <span className="text-muted/20 select-none">·</span>
-          <a
-            href={`tel:${meta.phone.replace(/\s/g, '')}`}
-            className="text-xs text-muted/60 hover:text-gold transition-colors"
-          >
-            Phone
-          </a>
         </div>
 
         <span className="text-[11px] text-muted/30">© {new Date().getFullYear()}</span>

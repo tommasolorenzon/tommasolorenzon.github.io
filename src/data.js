@@ -7,7 +7,6 @@ export const meta = {
   location:  'Geneva, Switzerland',
   tagline:   'Monte Carlo simulation at scale (HPC) | Uncertainty & risk modeling | Technical coordination',
   email:     'lorenzon.tommaso@gmail.com',
-  phone:     '+393317067181',
   linkedin:  'https://www.linkedin.com/in/tommaso-lorenzon/',
   github:    'https://github.com/tommasolorenzon',
   orcid:     'https://orcid.org/0009-0006-3898-0704',
