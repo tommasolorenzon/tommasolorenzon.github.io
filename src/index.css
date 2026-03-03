@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design tokens ─────────────────────────────────────────── */
+:root {
+  --color-canvas:  249 248 244;
+  --color-surface: 255 255 255;
+  --color-ink:     14 20 32;
+  --color-muted:   100 110 126;
+  --color-rim:     218 215 206;
+  --color-gold:    160 118 46;
+}
+
+.dark {
+  --color-canvas:  10 12 20;
+  --color-surface: 16 19 30;
+  --color-ink:     235 230 218;
+  --color-muted:   118 130 148;
+  --color-rim:     28 33 52;
+  --color-gold:    201 168 76;
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background: rgb(var(--color-gold) / 0.18);
+    color: rgb(var(--color-ink));
+  }
+}
+
+/* ─── Component shortcuts ────────────────────────────────────── */
+@layer components {
+  .section-label {
+    @apply text-[11px] font-medium uppercase tracking-[0.22em] text-gold;
+  }
+
+  .section-heading {
+    @apply font-serif text-3xl md:text-4xl font-medium text-ink leading-tight;
+  }
+
+  .section-wrap {
+    @apply max-w-5xl mx-auto px-6 md:px-10;
+  }
+}
