@@ -14,12 +14,19 @@ export const meta = {
 
 // About
 export const about = [`
-I am a research engineer focused on advanced simulation, quantitative modeling, and uncertainty analysis — applied to large-scale, high-stakes engineering systems.
-I have contributed to large-scale computational risk assessment projects for the Large Hadron Collider (LHC), the most powerful accelerator in the world, and contributed to the development and validation of a production-grade Monte Carlo simulation code used in research institutions and industry worldwide.
-I have coordinated international experimental campaigns at CERN, managing multiple research teams, scheduling beam operations, and overseeing operational decisions throughout the process.`,
+I am a research engineer focused on advanced simulation, quantitative modeling, and uncertainty analysis —
+applied to large-scale, high-stakes engineering systems.
+I have contributed to large-scale computational risk assessment projects for the Large Hadron Collider (LHC),
+the most powerful accelerator in the world, and contributed to the development and validation of a
+production-grade Monte Carlo simulation code used in research institutions and industry worldwide.
+I have coordinated international experimental campaigns at CERN, managing multiple research teams,
+scheduling beam operations, and overseeing operational decisions throughout the process.`,
 
-`I hold a degree in Nuclear Engineering from Politecnico di Milano, am a certified industrial engineer, and am currently pursuing a PhD at the Universitat Politècnica de Catalunya (UPC/BarcelonaTech) alongside my work at CERN. 
-My approach — and the underlying toolkit of stochastic simulation, uncertainty quantification, and data-driven risk modeling — is consistent and transferable across domains: build the model carefully, quantify what you don't know, take the lead when it matters, and defend every number.`,
+`I hold a degree in Nuclear Engineering from Politecnico di Milano, am a certified industrial engineer,
+and am currently pursuing a PhD at the Universitat Politècnica de Catalunya (UPC/BarcelonaTech) alongside my work at CERN.
+My approach — and the underlying toolkit of stochastic simulation, uncertainty quantification, and data-driven risk modeling —
+is consistent and transferable across domains: build the model carefully, quantify what you don't know,
+take the lead when it matters, and defend every number.`,
 ]
 
 // Highlights
@@ -68,13 +75,38 @@ export const research = [
 // Projects
 export const projects = [
   {
+    id: 8,
+    title:   'Real-Time Operational Monitoring Dashboard — CERN',
+    summary: 'Custom dashboard for real-time parameter monitoring and threshold-based alarm management during facility runs.',
+    period:  'May 2025',
+    detail:  `As Technical Coordinator of the CERN CERF facility, I designed and deployed a custom real-time monitoring dashboard on
+[REMUS Web](https://hse.cern/content/remus-supervision-control-and-data-acquisition-systems-radiation-and-environmental),
+CERN's unified supervision and data acquisition infrastructure (React front-end, Spring Boot back-end).
+The dashboard aggregates near-real-time data streams from multiple field instruments into a single operational view,
+accessible from any device inside or outside the control room. Threshold-based alarms were configured on key operational
+signals to flag anomalous conditions instantly, enabling rapid assessment and intervention during critical run phases.`,
+    images: [
+      {
+        src:     `${import.meta.env.BASE_URL}projects/dashboard.jpg`,
+        caption: 'Illustrative photograph of [REMUS Web](https://hse.cern/content/remus-supervision-control-and-data-acquisition-systems-radiation-and-environmental), sourced from public CERN documentation (© CERN). Actual dashboard data omitted to protect operational confidentiality.',
+      }
+    ],
+  },
+  {
     id: 1,
     title:   'Simulation-Based Risk Assessment for LHC Long Shutdown Planning — ATLAS Detector, CERN',
     summary: 'Large-scale stochastic risk assessment (Monte Carlo, HPC) applied to one of the world\'s most complex engineering systems.',
     period:  'Feb 2024 - Nov 2024',
-    detail: `Large-scale Monte Carlo radiation-transport simulations using FLUKA on HPC clusters (hundreds of CPUs, approximately one year of total CPU time) to forecast residual radioactivity in the [ATLAS experiment](https://atlas.cern/) ahead of LHC Long Shutdown 3. Results were validated against in-situ measurements from Long Shutdown 2 and post-processed into dose-rate maps for operational guidance. Approximately 500 scenarios were generated and delivered to ATLAS Technical Coordination for maintenance and upgrade planning.`,
+    detail:  `Large-scale Monte Carlo radiation-transport simulations using FLUKA on HPC clusters
+(hundreds of CPUs, approximately one year of total CPU time) to forecast residual radioactivity in the
+[ATLAS experiment](https://atlas.cern/) ahead of LHC Long Shutdown 3. Results were validated against
+in-situ measurements from Long Shutdown 2 and post-processed into dose-rate maps for operational guidance.
+Approximately 500 scenarios were generated and delivered to ATLAS Technical Coordination for maintenance and upgrade planning.`,
     images: [
-        { src: `${import.meta.env.BASE_URL}projects/atlas.png`, caption: 'Example of residual dose rate map for the ATLAS cavern. Source: [doi.org/10.12688/nuclscitechnolopenres.17594.1](https://doi.org/10.12688/nuclscitechnolopenres.17594.1)' }
+      {
+        src:     `${import.meta.env.BASE_URL}projects/atlas.png`,
+        caption: 'Example of residual dose rate map for the ATLAS cavern. Source: [doi.org/10.12688/nuclscitechnolopenres.17594.1](https://doi.org/10.12688/nuclscitechnolopenres.17594.1)',
+      }
     ],
   },
   {
@@ -82,22 +114,30 @@ export const projects = [
     title:   'Simulation-Based Risk Assessment for LHC Long Shutdown Planning — CMS Detector, CERN',
     summary: 'Large-scale stochastic risk assessment (Monte Carlo, HPC) — independent campaign on a second major LHC experiment.',
     period:  'Feb 2023 - Nov 2023',
-    detail: `Large-scale Monte Carlo radiation-transport simulations using FLUKA on HPC clusters to forecast residual radioactivity in the [CMS experiment](https://cms.cern/) ahead of LHC Long Shutdown 3. Post-processed into dose-rate maps for operational guidance. Approximately 500 scenarios delivered to CMS Technical Coordination for maintenance and upgrade planning.`,
+    detail:  `Large-scale Monte Carlo radiation-transport simulations using FLUKA on HPC clusters to forecast residual
+radioactivity in the [CMS experiment](https://cms.cern/) ahead of LHC Long Shutdown 3. Post-processed into
+dose-rate maps for operational guidance. Approximately 500 scenarios delivered to CMS Technical Coordination
+for maintenance and upgrade planning.`,
     images: [
-        { src: `${import.meta.env.BASE_URL}projects/cms.png`, caption: 'Example of residual dose rate map for the CMS cavern. Source: [oecd-nea.org — SATIF-15 Session 5](https://www.oecd-nea.org/upload/docs/application/pdf/2024-05/satif15-session-5.pdf)' }
+      {
+        src:     `${import.meta.env.BASE_URL}projects/cms.png`,
+        caption: 'Example of residual dose rate map for the CMS cavern. Source: [oecd-nea.org — SATIF-15 Session 5](https://www.oecd-nea.org/upload/docs/application/pdf/2024-05/satif15-session-5.pdf)',
+      }
     ],
   },
   {
     id: 5,
     title:   'A Monte Carlo Simulation for Reliability and Risk Analysis of an Industrial System',
     summary: 'Monte Carlo implementation in MATLAB for system reliability and availability analysis — MSc coursework.',
-    period: 'Apr 2019 - Jun 2019',
-    detail: `MATLAB implementation of an indirect Monte Carlo method to model failure and repair processes in a small industrial system (three components). Availability time-series, downtime distributions, and standard deviations were computed over 10⁵ simulations; importance measures were derived to rank component criticality.`,
+    period:  'Apr 2019 - Jun 2019',
+    detail:  `MATLAB implementation of an indirect Monte Carlo method to model failure and repair processes in a small
+industrial system (three components). Availability time-series, downtime distributions, and standard deviations
+were computed over 1e+5 simulations; importance measures were derived to rank component criticality.`,
     images: [
-        {
-            src: `${import.meta.env.BASE_URL}projects/availability.png`,
-            caption: 'Availability of the considered industrial system as function of time calculated over 1e+5 simulations using an indirect Monte Carlo method.'
-        }
+      {
+        src:     `${import.meta.env.BASE_URL}projects/availability.png`,
+        caption: 'Availability of the considered industrial system as function of time calculated over 1e+5 simulations using an indirect Monte Carlo method.',
+      }
     ],
   },
   {
@@ -105,19 +145,25 @@ export const projects = [
     title:   'A computational method for assessing the dose due to chronic release of radioactive air: a hadron therapy facility case study',
     summary: 'End-to-end computational risk workflow: source-term modeling, atmospheric dispersion, and uncertainty propagation.',
     period:  'Oct 2019 - Jun 2020',
-    detail: `Computational workflow to estimate public and occupational doses from chronic releases of airborne activation products in hadron therapy facilities. Starting from FLUKA-simulated source terms, inhalation and submersion doses were evaluated using HotSpot and GENII v2.10; in parallel, atmospheric dispersion and dose assessments were performed with a newly developed Monte Carlo–based Gaussian Plume Model.
-The methodology was applied to a real case study at CNAO (Italian National Centre for Hadrontherapy), where I spent eight months as a visiting student.
+    detail:  `Computational workflow to estimate public and occupational doses from chronic releases of airborne activation
+products in hadron therapy facilities. Starting from FLUKA-simulated source terms, inhalation and submersion doses
+were evaluated using HotSpot and GENII v2.10; in parallel, atmospheric dispersion and dose assessments were performed
+with a newly developed Monte Carlo–based Gaussian Plume Model.
+The methodology was applied to a real case study at CNAO (Italian National Centre for Hadrontherapy),
+where I spent eight months as a visiting student.
 
-Conservative annual public-dose estimates were obtained and limits of the assessment identified. The thesis is archived in the [University Archive](https://hdl.handle.net/10589/176260); part of the work was [published](https://doi.org/10.1093/rpd/ncae218) in a peer-reviewed journal.`,
+Conservative annual public-dose estimates were obtained and limits of the assessment identified.
+The thesis is archived in the [University Archive](https://hdl.handle.net/10589/176260);
+part of the work was [published](https://doi.org/10.1093/rpd/ncae218) in a peer-reviewed journal.`,
     images: [
-        { 
-            src: `${import.meta.env.BASE_URL}projects/gpm_3d.png`, 
-            caption: '3D visualization of the Monte Carlo implemented Gaussian Plume Model.' 
-        },
-        {
-            src: `${import.meta.env.BASE_URL}projects/dosemap_winds.png`,
-            caption: 'Average dose rate map around a hadron therapy facility, incorporating the assessment of annual wind patterns; numerical values removed for anonymization. Extracted from my MSc thesis.' 
-        },
+      {
+        src:     `${import.meta.env.BASE_URL}projects/gpm_3d.png`,
+        caption: '3D visualization of the Monte Carlo implemented Gaussian Plume Model.',
+      },
+      {
+        src:     `${import.meta.env.BASE_URL}projects/dosemap_winds.png`,
+        caption: 'Average dose rate map around a hadron therapy facility, incorporating the assessment of annual wind patterns; numerical values removed for anonymization. Extracted from my MSc thesis.',
+      },
     ],
   },
   {
@@ -125,38 +171,45 @@ Conservative annual public-dose estimates were obtained and limits of the assess
     title:   'Design Analysis of a Lead-cooled Fast Reactor Fuel Assembly',
     summary: 'Thermal-hydraulic and structural analysis with quantified safety margins — Gen-IV reactor fuel assembly design.',
     period:  'Oct 2019 - Jan 2020',
-    detail: `Thermal-hydraulic and mechanical analysis of a lead-cooled fast reactor fuel assembly. Coolant flow distribution, heat transfer, and pressure drops were evaluated for representative average and hot channels; fuel-pin radial and axial temperature profiles were computed accounting for irradiation-induced phenomena and material restructuring. Stress, creep, and fracture criteria were assessed against ASME standards.
+    detail:  `Thermal-hydraulic and mechanical analysis of a lead-cooled fast reactor fuel assembly. Coolant flow distribution,
+heat transfer, and pressure drops were evaluated for representative average and hot channels; fuel-pin radial and axial
+temperature profiles were computed accounting for irradiation-induced phenomena and material restructuring.
+Stress, creep, and fracture criteria were assessed against ASME standards.
 
-Detailed temperature distributions and stress estimates were delivered with quantified safety margins, identifying key sensitivities to geometry and material properties.`,
+Detailed temperature distributions and stress estimates were delivered with quantified safety margins,
+identifying key sensitivities to geometry and material properties.
+
+The entire analysis was implemented in Excel — equations, iterative solvers, and automation via VBA — as required
+by the course, demonstrating rigorous quantitative modeling within a spreadsheet environment.`,
     images: [
-        {
-            src: `${import.meta.env.BASE_URL}projects/axial_temp_profile.png`,
-            caption: 'Axial temperature profile of outer and inner cladding in the fuel pin in average conditions.'
-        }
+      {
+        src:     `${import.meta.env.BASE_URL}projects/axial_temp_profile.png`,
+        caption: 'Axial temperature profile of outer and inner cladding in the fuel pin in average conditions.',
+      }
     ],
   },
 //   {
-//     id: 6,
-//     title:  'Image-quality assessment methods for a digital radiographic detector',
+//     id:      6,
+//     title:   'Image-quality assessment methods for a digital radiographic detector',
 //     summary: 'Physical techniques in medical diagnostics MSc course',
-//     period: 'Apr 2019 - Jun 2019',
-//     detail: `
-// - **Objectives:** Implement and validate quantitative image-quality assessment methods for a digital radiographic detector to support detector characterization and QC.
-// - **Methodology:** Computed Modulation Transfer Function (MTF) using the edge method, Noise Power Spectrum (NPS) from flat-field images, and Detective Quantum Efficiency (DQE) following IEC 62220-1; implemented processing and Fourier-analysis routines in MATLAB and compared results against reference COQ software.
-// - **Case Study:** Evaluated a Trixell Pixium 4600 detector across exposure levels to derive spatial-frequency dependent performance metrics.
-// - **Results:** MATLAB-derived MTF, NPS and DQE curves matched reference data, validating the implemented procedures for detector characterization.
-// `,
-//     tags: ['Python', 'NumPy', 'SciPy', 'Fixed Income', 'Quantitative Finance'],
+//     period:  'Apr 2019 - Jun 2019',
+//     detail:  `Implemented and validated quantitative image-quality assessment methods for a digital radiographic detector.
+// Computed Modulation Transfer Function (MTF) using the edge method, Noise Power Spectrum (NPS) from flat-field images,
+// and Detective Quantum Efficiency (DQE) following IEC 62220-1; processing and Fourier-analysis routines implemented in
+// MATLAB and compared against reference COQ software. Applied to a Trixell Pixium 4600 detector across exposure levels.`,
 //     images: [],
 //   },
   {
     id: 7,
     title:   'Post-ischemic ventricular analysis using MRI images',
     summary: 'Bachelor of Science — thesis (original language: Italian)',
-    period: 'Apr 2018 - Jun 2018',
-    detail: `Image post-processing pipeline to quantify ventricular structural changes following ischemia using cardiac MRI sequences. Ventricular contours were segmented and functional metrics extracted (volumes, wall thickness); MATLAB-based statistical comparisons were performed against baseline cohorts.
+    period:  'Apr 2018 - Jun 2018',
+    detail:  `Image post-processing pipeline to quantify ventricular structural changes following ischemia using cardiac MRI
+sequences. Ventricular contours were segmented and functional metrics extracted (volumes, wall thickness);
+MATLAB-based statistical comparisons were performed against baseline cohorts.
 
-The pipeline was applied to a clinical MRI dataset focused on post-ischemic ventricular remodeling, producing quantitative metrics and visualizations documented in the final thesis report.`,
+The pipeline was applied to a clinical MRI dataset focused on post-ischemic ventricular remodeling,
+producing quantitative metrics and visualizations documented in the final thesis report.`,
     images: [],
   }
 ]
@@ -204,7 +257,8 @@ export const experience = [
     location: 'Milan, Italy',
     note:     '110/110 cum laude',
     keywords: [
-      'Nuclear Reactor Theory', 'Radiation Transport', 'Neutron Physics', 'Nuclear Reactor Design', 'Nuclear Technologies'
+      'Nuclear Reactor Theory', 'Radiation Transport', 'Neutron Physics',
+      'Nuclear Reactor Design', 'Nuclear Technologies',
     ],
     size: 'wide',
   },
@@ -217,7 +271,7 @@ export const experience = [
     keywords: ['Nuclear Reactor Dynamics', 'Safety Engineering'],
     size:     'sm',
   },
-{
+  {
     id:       6,
     org:      'Politecnico di Milano',
     role:     'BSc Biomedical Engineering',
@@ -274,7 +328,7 @@ export const experience = [
   },
   // {
   //   id:       12,
-  //   org:      "Festival dell’Economia di Trento",
+  //   org:      "Festival dell'Economia di Trento",
   //   role:     'Winner of the "EconoMia" national contest',
   //   period:   '2014',
   //   location: 'Trento, Italy',
@@ -286,35 +340,35 @@ export const experience = [
 // Skills
 export const skills = [
   {
-    area: 'Programming',
+    area:  'Programming',
     items: ['Python', 'Fortran', 'C++', 'Bash'],
   },
   {
-    area: 'Stochastic modeling & simulation',
+    area:  'Stochastic modeling & simulation',
     items: ['Monte Carlo methods (HPC scale)', 'Uncertainty quantification', 'Simulation design & problem formulation'],
   },
   {
-    area: 'HPC',
+    area:  'HPC',
     items: ['Bash', 'OpenMP', 'MPI', 'HTCondor'],
   },
   {
-    area: 'Domain-specific simulation codes (nuclear/physics)',
+    area:  'Domain-specific simulation codes (nuclear/physics)',
     items: ['FLUKA', 'MCNP', 'PHITS', 'HotSpot', 'GENII v2.10'],
   },
   {
-    area: 'Data and visualization',
+    area:  'Data and visualization',
     items: ['NumPy', 'SciPy', 'pandas', 'matplotlib', 'Apache Spark', 'Jupyter', 'Excel', 'gnuplot'],
   },
   {
-    area: 'Writing and reporting',
+    area:  'Writing and reporting',
     items: ['LaTeX', 'Markdown', 'reStructuredText', 'Jinja'],
   },
   {
-    area: 'Infrastructure',
+    area:  'Infrastructure',
     items: ['Git', 'Docker', 'Linux'],
   },
   {
-    area: 'Methods',
+    area:  'Methods',
     items: [
       'Time-series analysis (beam data)',
       'High-volume simulation data pipelines',
@@ -322,7 +376,7 @@ export const skills = [
     ],
   },
   {
-    area: 'Languages',
+    area:  'Languages',
     items: ['Italian', 'English', 'French'],
   },
 ]
